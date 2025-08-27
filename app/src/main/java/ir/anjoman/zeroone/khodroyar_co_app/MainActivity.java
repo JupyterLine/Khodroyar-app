@@ -1,6 +1,7 @@
 package ir.anjoman.zeroone.khodroyar_co_app;
 
 import android.os.Bundle;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -34,10 +35,19 @@ public class MainActivity extends AppCompatActivity {
                 super.onPageFinished(view, url);
             }
         });
+        webview.addJavascriptInterface(new Object() {
+            @JavascriptInterface
+            public void retry() {
+                runOnUiThread(() -> {
+                    // بررسی دوباره اینترنت یا بارگذاری مجدد WebView
+                    webview.loadUrl("https://khodroyar-co.ir");
+                });
+            }
+        }, "Android");
 
         // 🔹 چک اولیه موقع ورود
         if (Utils.isNetworkAvailable(this)) {
-            webview.loadUrl(lastUrl);
+            webview.loadUrl("file:///android_asset/offline.html");
         } else {
             Toast.makeText(this, "اینترنت در دسترس نیست ❌", Toast.LENGTH_SHORT).show();
             webview.loadUrl("file:///android_asset/offline.html");
@@ -49,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onAvailable() {
                 runOnUiThread(() -> {
                     Toast.makeText(MainActivity.this, "اتصال اینترنت برقرار شد ✅", Toast.LENGTH_SHORT).show();
-                    webview.loadUrl(lastUrl); // برگرداندن به همان صفحه قبلی
+                    webview.loadUrl("https://khodroyar-co.ir"); // برگرداندن به همان صفحه قبلی
                 });
             }
 
