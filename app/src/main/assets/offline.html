@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="utf-8">
-  <title>خودرویار – آفلاین</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: tahoma, sans-serif;
-      background: #f5f7fa;
-      color: #333;
-      direction: rtl;
-      text-align: center;
-    }
-    header {
-      background: #005baa;
-      color: #fff;
-      padding: 20px;
-    }
-    header h1 {
-      margin: 10px 0;
-      font-size: 24px;
-    }
-    header p {
-      margin: 0;
-      font-size: 16px;
-    }
-    .offline-box {
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 400px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-    }
-    .offline-box h2 {
-      color: #d9534f;
-      font-size: 20px;
-      margin-bottom: 15px;
-    }
-    .offline-box p {
-      font-size: 14px;
-      color: #555;
-    }
-    .retry-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #005baa;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 10px;
-      font-size: 12px;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>آفلاین - خودرویار</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: "Tahoma", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f8fc;
+            direction: rtl;
+            text-align: center;
+        }
+        header {
+            background: #0d2a59;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 30px 20px;
+        }
+        .content img {
+            max-width: 250px;
+            margin: 20px auto;
+            display: block;
+        }
+        h1 {
+            color: #0d2a59;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #444;
+            font-size: 15px;
+            margin: 15px 0 25px 0;
+        }
+        .retry-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #0d6efd;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .retry-btn:hover {
+            background: #084298;
+        }
+        footer {
+            background: #0d2a59;
+            color: white;
+            padding: 10px;
+            font-size: 13px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>🚗 خودرویار</h1>
-    <p>همراه هوشمند خودرو شما</p>
-  </header>
+    <header>
+        🚗 خودرویار - همراه هوشمند خودرو شما
+    </header>
 
-  <div class="offline-box">
-    <h2>اتصال اینترنت موجود نیست!</h2>
-    <p>شما در حالت آفلاین هستید.<br>
-       لطفاً اینترنت خود را وصل کنید و دوباره تلاش کنید.</p>
-    <a href="#" onclick="Android.retry()" class="retry-btn">🔄 تلاش مجدد</a>
-  </div>
+    <div class="content">
+        <img src="file:///android_asset/pic.png" alt="offline">
+        <h1>شما آفلاین هستید!</h1>
+        <p>اتصال اینترنت برقرار نیست. لطفاً اینترنت خود را روشن کنید و سپس روی دکمه زیر بزنید.</p>
+        <a href="#" onclick="Android.retry()" class="retry-btn">🔄 تلاش مجدد</a>
+    </div>
 
-  <footer>
-    © کلیه حقوق متعلق به خودرویار
-  </footer>
+    <footer>
+        &copy; 2025 تمامی حقوق محفوظ است | خودرویار
+    </footer>
 </body>
 </html>
