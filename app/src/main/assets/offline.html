@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8">
+  <title>خودرویار – آفلاین</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: tahoma, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      direction: rtl;
+      text-align: center;
+    }
+    header {
+      background: #005baa;
+      color: #fff;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 10px 0;
+      font-size: 24px;
+    }
+    header p {
+      margin: 0;
+      font-size: 16px;
+    }
+    .offline-box {
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    }
+    .offline-box h2 {
+      color: #d9534f;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .offline-box p {
+      font-size: 14px;
+      color: #555;
+    }
+    .retry-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #005baa;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 10px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚗 خودرویار</h1>
+    <p>همراه هوشمند خودرو شما</p>
+  </header>
+
+  <div class="offline-box">
+    <h2>اتصال اینترنت موجود نیست!</h2>
+    <p>شما در حالت آفلاین هستید.<br>
+       لطفاً اینترنت خود را وصل کنید و دوباره تلاش کنید.</p>
+    <a href="#" onclick="Android.retry()" class="retry-btn">🔄 تلاش مجدد</a>
+  </div>
+
+  <footer>
+    © کلیه حقوق متعلق به خودرویار
+  </footer>
+</body>
+</html>
